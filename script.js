@@ -77,7 +77,7 @@ Dog: https://random.dog/woof.json
 
     document.addEventListener('scroll', function() {
 
-        if(document.body.scrollHeight >= window.scrollY + window.innerHeight) {
+        if(document.body.scrollHeight === window.scrollY + window.innerHeight) {
             console.log('Scroll Triggered !!!');
             render_N_Images(6);
         }
