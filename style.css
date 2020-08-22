@@ -8,11 +8,10 @@ html {
 }
 
 body {
-  padding: 2rem 2rem;
+  padding: 2rem 5rem;
 }
 
 h1 {
-
   width: 100%;
   font-size: 2rem;
   margin-bottom: 2rem;
@@ -20,6 +19,7 @@ h1 {
   font-family: Helvetica, Arial;
 }
 
+/* displays the image counter on the top */
 .totalImg {
   width: max-content;
   background-color: #abcde2;
@@ -29,12 +29,12 @@ h1 {
   font-size: 1.8rem;
 }
 
+/* main gallery div */
 .gallery {
-   
   display: grid;
-  grid-template-rows: 250px;
-  grid-auto-rows: 250px;
-  grid-gap: 1rem;
+  grid-gap: 5rem;
+  /* align each image div at the center of grid cell - both axis */
+  place-items: center;
 }
 
 @media (min-width: 800px) {
@@ -60,14 +60,17 @@ div div:hover {
 }
 
 div div {
-  padding: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+  padding: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
   border-radius: 10px;
+  /* take full grid cell width */
+  width: 100%;
 }
 
-img {  
-  height: 100%;
-  width: 100%;  
+img {
+  /* fill the complete div */
+  width: 100%;
+  /* images that are too tall must be visible fully on screen */
+  max-height: 95vh;   
   border-radius: 10px;
-  object-fit: contain;
 }

@@ -8,10 +8,8 @@ should load more
 3. Images will repeat in the API response (which is random). But it should not repeat
 in your display.
 Expectations from a good design:
-1. Images will come in random sizes. You are expected to not break the page design as
-much as possible.
-2. Arrangements of images in the page is left to your imagination and creativity
-a. You can rearrange them.
+1. Images will come in random sizes. You are expected to not break the page design as much as possible.
+2. Arrangements of images in the page is left to your imagination and creativity You can rearrange them.
 3. A good design will take care of memory consumed in the browser
 
 Cat: https://aws.random.cat/meow 
@@ -51,7 +49,7 @@ Dog: https://random.dog/woof.json
         document.getElementsByClassName(CSS_CLASSES["total_image_h1"])[0].innerHTML = `Total Images are ${totalImagesDisplayed}`;
     }
 
-    const render_N_Images = (num) => {
+    const renderNImages = (num) => {
         
         for(let i = 0 ; i < num ; i++) {
 
@@ -79,10 +77,10 @@ Dog: https://random.dog/woof.json
 
         if(document.body.scrollHeight === window.scrollY + window.innerHeight) {
             console.log('Scroll Triggered !!!');
-            render_N_Images(6);
+            renderNImages(5);
         }
     });
 
-    // initialize the screen with 12 images
-    render_N_Images(12);
+    // initialize the screen with 10 images
+    renderNImages(10);
 }
